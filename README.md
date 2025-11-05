@@ -33,7 +33,7 @@ Cada enemigo se dibuja sobre el frame utilizando OpenCV, al igual que la nave y 
 
 Cuando una bala impacta un enemigo, éste se elimina y la puntuación del jugador se incrementa. Además se realizan comprobaciones de colisión entre la nave y los enemigos; si un enemigo llega a tocar la nave (o llega a un nivel inferior de la pantalla que equivalga a esa colisión lógica) la partida termina y se muestra la puntuación final. 
 
-Si esa puntuación supera el valor almacenado previamente en el archivo `highscore.txt`, entonces ese valor se actualiza y se guarda de nuevo para partidas futuras. Todo este flujo se ejecuta en tiempo real a medida que OpenCV va capturando cada imagen y renderizando simultáneamente la interfaz del juego mediante rectángulos, textos y sprites opcionales. El usuario únicamente necesita moverse y sonreír para jugar. 
+Si esa puntuación supera el valor almacenado previamente en el archivo `puntuacion.txt`, entonces ese valor se actualiza y se guarda de nuevo para partidas futuras. Todo este flujo se ejecuta en tiempo real a medida que OpenCV va capturando cada imagen y renderizando simultáneamente la interfaz del juego mediante rectángulos, textos y sprites opcionales. El usuario únicamente necesita moverse y sonreír para jugar. 
 
 No se requiere teclado ni ratón, lo cual demuestra de forma directa cómo la visión por computador puede sustituir dispositivos de entrada tradicionales y convertirse en la interfaz de control principal en un sistema interactivo funcional.
 
@@ -50,7 +50,7 @@ No se requiere teclado ni ratón, lo cual demuestra de forma directa cómo la vi
 | `/juego/items.py` | clases del juego (Nave, Bala, Enemigo) y funciones de colisión |
 | `/juego/logica.py` | se establece todo la lógica del juego. Se establece que es lo que se modifica por cada frame que se captura |
 | `/juego/extra.py` | utilidades: debug, puntuaciones, FPS |
-| `/datos/highscore.txt` | almacenar highscore persistente |
+| `/datos/puntuacion.txt` | almacenar la puntuación persistente |
 
 ---
 
